@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>Crontab执行时间计算，Cron表达式编写 - 在线工具</title>
+		<meta name="keywords"
+			content="crontab,cron,cron表达式,定时任务,crontab格式,时间计算,执行时间,定时器计算器,crontab转换,crontab调试,linux,,在线工具,要你命3000">
+		<meta name="description" content="crontab可视化调试工具，在线查看执行时间，在线语法参考，查看未来10次定时器执行时间">
+		<link href="./style/crontab.f4482c4a.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l" style="padding-bottom: 20px;">
+					<h1>CRONTAB 执行时间计算</h1>
+					<div class="row"><span>CRON 表达式</span> <input placeholder="请输入cron表达式"> <button
+							class="button">查看执行时间</button></div>
+					<div class="vblock-s" style="display: none;">
+						<div class="row-title">接下来10次执行的时间：</div>
+						<div class="table">
+							<div class="row table_th">
+								<div class="table_td" style="width: 100px">次序</div>
+								<div class="table_td">时间</div>
+							</div>
+							<div class="row table_row">
+								<div class="table_td" style="width: 100px">{{ index }}</div>
+								<div class="table_td">{{ dateFormat(item) }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="statement vblock-s">
+						<h4 class="lsb">参数说明：</h4>
+						<pre><code>
+    Linux
+    *    *    *    *    *
+    -    -    -    -    -
+    |    |    |    |    |
+    |    |    |    |    +----- 星期几 (0 - 7) (星期天 = 0 or 7) 或者 sun,mon,tue,wed,thu,fri,sat
+    |    |    |    +---------- 月份 (1 - 12) 或者 jan,feb,mar,apr ...
+    |    |    +--------------- 天 (1 - 31)
+    |    +-------------------- 时 (0 - 23)
+    +------------------------- 分 (0 - 59)
+    </code></pre>
+						<h4 class="lsb">例子：</h4>
+						<div class="table">
+							<div class="row table_th">
+								<div class="table_td" style="width: 250px">次序</div>
+								<div class="table_td">时间</div>
+							</div>
+							<div class="row table_row">
+								<div class="table_td" style="width: 250px">{{ item.title }}</div>
+								<div class="table_td">{{ item.cron }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="introduce vblock-s">
+						<h3 class="lsb">crond简介</h3>
+						<p>Linux 系统定时任务则是由 cron (crond) 这个系统服务来控制的。Linux 系统上面原本就有非常多的计划性工作，因此这个系统服务是默认启动的。 另外,
+							由于使用者自己也可以设置计划任务，所以， Linux 系统也提供了使用者控制计划任务的命令 :crontab 命令。</p>
+						<p>crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，
+							默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/crontab.83f3de15801fccf3176f.js"></script>
+	</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+        <title>在线时间戳转换工具(Unix timestamp) - 在线工具</title>
+        <meta name="keywords" content="Unix,时间戳,timetamp,时间戳转换,时间戳转换工具,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+        <meta name="description" content="Unix timestamp，在线时间戳转换工具，可转北京时间；字符串时间转时间戳，支持毫秒和秒">
+        <link href="./style/timestamp.957e3922.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="page">
+            <h1 style="display: none">时间戳转换工具(Unix timestamp)，开发者工具，支持时区切换</h1>
+            <div class="page_wrapper">
+                <header></header>
+                <div class="main_body wrapper a-p">
+                    <div class="section current">
+                        <div class="row" style="flex-wrap: wrap; justify-content: center">
+                            <div class="title">当前时间</div>
+                            <div style="display:flex;align-items: center; justify-content: center;width: 350px;">
+                                <div class="current-time">1600000000</div>
+                                <button type="text" class="btn unit current" style="width: 56px">秒</button>
+                            </div>
+                            <div class="row">
+                                <span class="btn ctrl" style="font-size: 14px; color: #E6A23C;">暂停 </span>
+                                <span class="btn copy" style="font-size: 14px; color: #66b1ff">复制</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section timestamp-date">
+                        <div class="title">时间戳转换</div>
+                        <div class="row wrap">
+                            <div class="sub-row">
+                                <input class="input timestamp" placeholder="时间戳">
+                                <button type="text" class="btn unit t2d" style="width: 56px">秒</button>
+                                <button class="btn t2d">转换</button>
+                            </div>
+                            <div class="sub-row">
+                                <input class="output date">
+                                <select class="selector timezone" style="flex-shrink:0;width: 120px">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section date-timestamp">
+                        <div class="title">获取时间戳</div>
+                        <div class="row input">
+                            <div class="row btns">
+                                <button title="切换输入方式" style="margin-right: 5px;">切换</button>
+                            </div>
+                            <div class="row btns date-string">
+                                <input>
+                            </div>
+                            <button class="btn d2t" style="margin-left: 10px;">转换</button>
+                        </div>
+                        <div class="row">
+                            <input class="input timestamp" placeholder="时间戳">
+                            <button type="text" class="btn unit t2d" style="width: 56px">秒</button>
+                            <select class="selector timezone" style="flex-shrink:0;width: 120px">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="section calculate">
+                        <div class="title">秒转天、小时、分钟、秒</div>
+                        <div class="row">
+                            <input style="width: 250px">
+                            <button type="text" class="btn unit calc" style="width: 56px">秒</button>
+                            <button class="btn calculate">转换</button>
+                        </div>
+                        <div class="row">
+                            <div class="card"></div>
+                        </div>
+                    </div>
+                    <div class="section code-example">
+                        <h2 class="title">示例代码：</h2>
+                        <div class="collapse">
+                            <div class="collapse-item">
+                                <div class="collapse-item_head">
+                                    <span>获取时间戳</span>
+                                    <i class="arrow"></i>
+                                </div>
+                                <div class="examples current">
+                                    <div class="example header">
+                                        <div class="lang">语言（language）</div>
+                                        <div class="code">代码（code）</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Java</div>
+                                        <div class="code">long epoch = System.currentTimeMillis()/1000</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">JavaScript</div>
+                                        <div class="code">Math.floor(new Date().getTime()/1000)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PHP</div>
+                                        <div class="code">time()</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Python</div>
+                                        <div class="code">
+                                            import time;<br>time.time()
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Ruby</div>
+                                        <div class="code">Time.now (or Time.new)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Go</div>
+                                        <div class="code">time.Now().Unix()</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">MySQL</div>
+                                        <div class="code">SELECT unix_timestamp(now())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PowerShell</div>
+                                        <div class="code">[int][double]::Parse((Get-Date (get-date).touniversaltime() -UFormat %s))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQL Server</div>
+                                        <div class="code">SELECT DATEDIFF(s, '1970-01-01 00:00:00', GETUTCDATE())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">C#</div>
+                                        <div class="code">
+                                            DateTimeOffset.Now.ToUnixTimeSeconds() (.NET Framework 4.6+/.NET Core)<br>旧版本: var epoch = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">C++11</div>
+                                        <div class="code">double now = std::chrono::duration_cast &lt;std::chrono::second &gt;(std::chrono::system_clock::now().time_since_epoch()).count()</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Perl</div>
+                                        <div class="code">time</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Objective-C</div>
+                                        <div class="code">[[NSDate date] timeIntervalSince1970]; (returns double) or NSString *currentTimestamp = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Lua</div>
+                                        <div class="code">epoch = os.time([date])</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">AutoIT</div>
+                                        <div class="code">_DateDiff('s', "1970/01/01 00:00:00", _NowCalc())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Delphi</div>
+                                        <div class="code">Epoch := DateTimetoUnix(Now)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">R</div>
+                                        <div class="code">as.numeric(Sys.time())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Erlang/OTP</div>
+                                        <div class="code">
+                                            18+版本:system_time(seconds)<br>旧版本: calendar:datetime_to_gregorian_seconds(calendar:universal_time())-719528*24*3600
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PostgreSQL</div>
+                                        <div class="code">SELECT extract(epoch FROM now())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQLite</div>
+                                        <div class="code">SELECT strftime('%s', 'now')</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Oracle PL/SQL</div>
+                                        <div class="code">SELECT (CAST(SYS_EXTRACT_UTC(SYSTIMESTAMP) AS DATE) - TO_DATE('01/01/1970','DD/MM/YYYY')) * 24 * 60 * 60 FROM DUAL</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">IBM Informix</div>
+                                        <div class="code">SELECT dbinfo('utc_current') FROM sysmaster:sysdual</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Visual FoxPro</div>
+                                        <div class="code">DATETIME() - {^1970/01/01 00:00:00} Warning: time zones not handled correctly</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Adobe ColdFusion</div>
+                                        <div class="code">&lt;cfset epochTime = left(getTickcount(), 10)&gt;</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Tcl/Tk</div>
+                                        <div class="code">clock seconds</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Unix/Linux Shell</div>
+                                        <div class="code">date +%s</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <div class="collapse-item_head">
+                                    <span>字符串转时间戳</span>
+                                    <i class="arrow"></i>
+                                </div>
+                                <div class="examples d2t">
+                                    <div class="example header">
+                                        <div class="lang">语言（language）</div>
+                                        <div class="code">代码（code）</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Java</div>
+                                        <div class="code">long epoch = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").parse("01/01/1970 01:00:00").getTime() / 1000</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">JavaScript</div>
+                                        <div class="code">Math.floor(new Date().getTime() / 1000)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PHP</div>
+                                        <div class="code">echo stortotime("2020/03/18"))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Python</div>
+                                        <div class="code">
+                                            import calendar, time;<br>calendar.timegm(time.strptime('2000-01-01 12:34:00', '%Y-%m-%d %H:%M:%S'))
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Ruby</div>
+                                        <div class="code">Time.local(year, month, day, hour, minute, second, usec )</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">MySQL</div>
+                                        <div class="code">SELECT unix_timestamp(time)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQL Server</div>
+                                        <div class="code">SELECT DATEDIFF(s, '1970-01-01 00:00:00', GETUTCDATE())</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">AutoIT</div>
+                                        <div class="code">_DateDiff('s', "1970/01/01 00:00:00", "YYYY/MM/DD HH:MM:SS")</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Delphi</div>
+                                        <div class="code">Epoch := DateTimeToUnix(StrToDateTime(myString))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">R</div>
+                                        <div class="code">as.numeric(as.POSIXct("YYYY-MM-dd HH:mm:ss", tz = "GMT", origin="1970-01-01"))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PostgreSQL</div>
+                                        <div class="code">
+                                            SELECT extract(epoch FROM date('2000-01-01 12:34'));<br>
+                                            With timestamp: SELECT EXTRACT(EPOCH FROM TIMESTAMP WITH TIME ZONE '2018-02-16 20:38:40-08');<br>With interval: SELECT EXTRACT(EPOCH FROM INTERVAL '5 days 3 hours')
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQLite</div>
+                                        <div class="code">SELECT strftime('%s',timestring)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Adobe ColdFusion</div>
+                                        <div class="code">int(parseDateTime(datetime).getTime()/1000)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Tcl/Tk</div>
+                                        <div class="code">clock seconds</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Unix/Linux Shell</div>
+                                        <div class="code">date +%s -d"Jan 1, 1980 00:00:01"</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">VBScript/ASP</div>
+                                        <div class="code">DateDiff("s", "01/01/1970 00:00:00", time field)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse-item">
+                                <div class="collapse-item_head">
+                                    <span>时间戳转字符串</span>
+                                    <i class="arrow"></i>
+                                </div>
+                                <div class="examples t2d">
+                                    <div class="example header">
+                                        <div class="lang">语言（language）</div>
+                                        <div class="code">代码（code）</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Java</div>
+                                        <div class="code">String date = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (epoch*1000))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">JavaScript</div>
+                                        <div class="code">new Date()</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PHP</div>
+                                        <div class="code">echo date(output format, epoch)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Python</div>
+                                        <div class="code">
+                                            import time<br>
+                                            timeStamp = 1557502800<br>
+                                            timeArray = time.localtime(timeStamp)<br>otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Ruby</div>
+                                        <div class="code">Time.at(epoch)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">MySQL</div>
+                                        <div class="code">FROM_UNIXTIME()</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PowerShell</div>
+                                        <div class="code">
+                                            Function get-epochDate ($epochDate) {<br>
+                                            <span class="indent"></span>
+                                            [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($epochDate))<br>}
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQL Server</div>
+                                        <div class="code">DATEADD(s, epoch, '1970-01-01 00:00:00')</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">C#</div>
+                                        <div class="code">
+                                            private string epoch2string(int epoch) {<br>
+                                            <span class="indent"></span>
+                                            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(epoch).ToShortDateString();<br>}
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Objective-C</div>
+                                        <div class="code">NSDate * myDate = [NSDate dateWithTimeIntervalSince1970:epoch]; NSLog(@"%@", date)</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Lua</div>
+                                        <div class="code">datestring = os.date([format[,epoch]])</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">AutoIT</div>
+                                        <div class="code">_DateAdd("s", $EpochSeconds , "1970/01/01 00:00:00")</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Delphi</div>
+                                        <div class="code">myString := DateTimeToStr(UnixToDateTime(Epoch))</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">R</div>
+                                        <div class="code">as.POSIXct(epoch, origin="1970-01-01", tz="GMT")</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">PostgreSQL</div>
+                                        <div class="code">
+                                            versions 8.1+: SELECT to_timestamp(epoch)<br>versions older: SELECT TIMESTAMP WITH TIME ZONE 'epoch' + epoch * INTERVAL '1 second'
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">SQLite</div>
+                                        <div class="code">
+                                            SELECT datetime(epoch_to_convert, 'unixepoch')<br>local timezone: SELECT datetime(epoch_to_convert, 'unixepoch', 'localtime')
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Oracle PL/SQL</div>
+                                        <div class="code">
+                                            SELECT to_date('01-JAN-1970','dd-mon-yyyy')+(1526357743/60/60/24) from dual<br>Replace 1526357743 with epoch
+                                        </div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">IBM Informix</div>
+                                        <div class="code">SELECT dbinfo('utc_to_datetime',epoch) FROM sysmaster:sysdual;</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Adobe ColdFusion</div>
+                                        <div class="code">DateAdd("s",epoch,"1/1/1970");</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Tcl/Tk</div>
+                                        <div class="code">clock format 1325376000 Documentation</div>
+                                    </div>
+                                    <div class="example">
+                                        <div class="lang">Unix/Linux Shell</div>
+                                        <div class="code">date -d @1520000000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section text">
+                        <h5 class="title">什么是Unix时间戳？</h5>
+                        <div class="content">
+                            <p>Unix时间戳（Unix时间/POSIX时间）是自1970年1月1日（UTC / GMT午夜）以来经过的秒数。</p>
+                            <p>此页面上的转换器将以秒（10位数字）和毫秒（13位数字）为单位的时间戳转换为可读的日期。</p>
+                        </div>
+                        <div class="table">
+                            <div class="row table_th">
+                                <div class="table_td">单位</div>
+                                <div class="table_td">数量</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1分钟</div>
+                                <div class="table_td">60</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1小时</div>
+                                <div class="table_td">3600</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1天</div>
+                                <div class="table_td">86400</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1周（星期）</div>
+                                <div class="table_td">604800</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1个月（30.44天）</div>
+                                <div class="table_td">2629743</div>
+                            </div>
+                            <div class="row table_row">
+                                <div class="table_td">1年（365.24天）</div>
+                                <div class="table_td">31556926</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            }
+            )();
+        </script>
+        <script src="./lib/timestamp.540fb9fa9dfbda64f129.js"></script>
+    </body>
+</html>

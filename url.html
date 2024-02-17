@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>URL编码解码，URLEncode/URLDecode - 在线工具</title>
+		<meta name="keywords" content="urlencode,urldecode,编码转换,编码,解码,链接转换,链接编码,url编码,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="在线 URL 编码、解码工具，urlencode，urldecode，可以忽略保留字符">
+		<link href="./style/url.c99542ac.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body a-p vblock-l">
+					<h1>Url 编码、解码</h1>
+					<div class="row"><span class="yt-switch"></span>
+						<div>忽略保留字符 ; , / ? : @ &amp; = + $ #</div>
+					</div>
+					<div class="vblock-m"><textarea name="" id="" cols="30" rows="10"></textarea></div>
+					<div class="row" style="justify-content: center"><button>编码</button> <button>解码</button></div>
+					<div class="vblock-m"><textarea></textarea></div>
+					<div class="introduce" style="margin-top: 200px;">
+						<h2 class="lsb">为什么要URLEncode</h2>
+						<p>URL在定义时，定义为只支持ASCII字符，所以URL的发送方与接收方都只能处理ASCII字符。所以当你的URL中有非ASCII字符时就需要编码转换。</p>
+						<p>在Web程序中进行URL请求时，常会遇到URL中含有特殊字符的问题，常见的特殊字符有 ?$&amp;*@等字符，或者是中文。</p>
+						<p>遇到这种情况时，就要对URL进行编码，用一种规则替换掉这些特殊字符，这就是URLEncode</p>
+						<h2 class="lsb">URLEncode 规则</h2>
+						<p>1.将空格转换为加号（+）</p>
+						<p>2.对0-9、a-z、A-Z之间的字符保持不变</p>
+						<p>3.对于所有其他的字符，用这个字符的当前当前字符集编码在内存中的十六进制格式表示，并在每一个字节前加上一个百分号（%），如字符“+”是用%2B表示，字符“=”用%3D表示，字符“&amp;”用%26表示，每个中文字符在内存中占两个字节，字符“中”用%D6%D0表示，字符“国”用%B9%FA表示。
+						</p>
+						<p>4.空格也可以直接用其十六进制编码方式，即用%20表示，而不是将它转换为加号（+）。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/url.5900d24802a5e2068227.js"></script>
+	</body>
+</html>

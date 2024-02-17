@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>Base64编码、解码，BASE64转图片，图片转BASE64 - 在线工具</title>
+		<meta name="keywords"
+			content="base64编码,BASE64,BASE64编码,BASE64转图片,图片转BASE64,解码,base64,base64转换,转换工具,文件base64,工具箱,在线工具,要你命3000">
+		<meta name="description" content="在线 Base64 编码解码工具，BASE64转图片，图片转BASE64，开发人员在线必备工具">
+		<link href="./style/base64.a7c0b7ea.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<h1 style="display: none">Base64编码、解码工具，在线工具箱</h1>
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l">
+					<div>
+						<div style="font-size: 32px">
+							<div class="tab-pane-wrapper">
+								<div class="row array"><input class="textarea" type="textarea" rows="10"
+										placeholder="请输入需要转码的字符串"></div>
+								<div class="row operate" style="display:flex;justify-content: center">
+									<button>编码</button> <button>解码</button></div>
+								<div class="row base64"><input class="textarea" type="textarea" rows="10"
+										placeholder="请输入需要解码的字符串"></div>
+							</div>
+						</div>
+						<div>
+							<div class="row" style="align-items: center"><input type="file"></div>
+							<div class="row file_lang_operate">
+								<div
+									style="display:flex; justify-content: space-between; margin-bottom: 5px; flex-wrap: wrap;">
+									<div class="row lang-select"><button>data uri</button> <button>css</button>
+										<button>html</button></div>
+									<div class="operate"><button class="btn clear">清空</button> <button
+											class="btn copy">复制</button></div>
+								</div>
+							</div>
+							<div class="row"><input class="textarea" type="textarea" rows="20"></div>
+						</div>
+					</div>
+					<div class="statements" style="margin-top: 200px;">
+						<h2 class="lsb">1. Base64是什么？</h2>
+						<p>Base64是网络上最常见的用于传输8Bit字节码的编码方式之一，Base64就是一种基于64个可打印字符来表示二进制数据的方法</p>
+						<p>什么是“可打印字符”？为什么要用它来传输8Bit字节码？</p>
+						<p>首先，在回答这两个问题之前我们有必要来思考一下什么情况下需要使用到Base64。Base64一般用于在HTTP协议下传输二进制数据，由于HTTP协议是文本协议，所以在HTTP协议下传输二进制数据需要将二进制数据转换为字符数据。然而直接转换是不行的，因为网络传输只能传输可打印字符。ASCII码的取值范围是[0，127]，其中，[32，126]是可打印字符，其余是不可打印字符。也就是说网络传输只能传输这95个字符，不在这个范围内的字符无法传输。那么该怎么才能传输其他字符呢？其中一种方式就是使用Base64。
+						</p>
+						<p>Base64，就是使用64个可打印字符来表示二进制数据的方法。Base64的索引与对应字符的关系如下表所示：</p><img
+							src="https://img-blog.csdnimg.cn/2020042021592018.png" alt="Base64的索引与对应字符的关系表"
+							loading="lazy">
+						<p>在Base64中的可打印字符包括字母A-Z、a-z、数字0-9共有62个字符，加上+、/共64个字符，实际上还有一个字符=来作为后缀。</p>
+						<h2 class="lsb">2. Base64编码的规则</h2>
+						<p>① 把3个字节变成4个字节。</p>
+						<p>② 每76个字符加一个换行符。</p>
+						<p>③ 最后的结束符也要处理。</p>
+						<h2 class="lsb">3. Base64编码原理</h2>
+						<p>Base64编码的思想是：采用64个基本的ASCII码字符对数据进行重新编码。</p>
+						<p>① 将需要编码的数据拆分成字节数组，以3个字节为一组，按顺序排列24位数据，再把这24位数据分成4组，即每组6位；</p>
+						<p>② 再在每组的的最高位前补两个0凑足一个字节，这样就把一个3字节为一组的数据重新编码成了4个字节；</p>
+						<p>③ 当所要编码的数据的字节数不是3的整倍数，也就是说在分组时最后一组不够3个字节，这时在最后一组填充1到2个0字节，并在最后编码完成后在结尾添加1到2个=号。</p>
+						<h2 class="lsb">4. Base64如何编码</h2>
+						<p>如果将索引转换为对应的二进制数据的话需要至多6个Bit。然而ASCII码需要8个Bit来表示，那么怎么使用6个Bit来表示8个Bit的数据呢？6个Bit当然不能存储8个Bit的数据，但是46个Bit可以存储38个Bit的数据啊！如下表所示：
+						</p><img src="https://img-blog.csdnimg.cn/20200420220151383.png" alt="Base64的索引与对应字符的关系表"
+							loading="lazy">
+						<p>可以看到“Son”通过Base64编码转换成了“U29u”。这是刚刚好的情况，3个ASCII字符刚好转换成对应的4个Base64字符。但是，当需要转换的字符数不是3的倍数的情况下该怎么办呢？Base64规定，当需要转换的字符不是3的倍数时，一律采用补0的方式凑足3的倍数，具体如下表所示：
+						</p><img src="https://img-blog.csdnimg.cn/20200420220305890.png" alt="Base64的索引与对应字符的关系表"
+							loading="lazy">
+						<p>每6个Bit为一组，第一组转换后为字符“U”，第二组末尾补4个0转换后为字符“w”。剩下的使用“=”替代。即字符“S”通过Base64编码后为“Uw==”。这就是Base64的编码过程。
+						</p>
+						<div>————————————————</div>
+						<div>版权声明：本文为CSDN博主「无名无奈」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</div>
+						<div>原文链接：https://blog.csdn.net/weixin_40332490/article/details/105645750</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/base64.8b6c9ee023b5c682e470.js"></script>
+	</body>
+</html>
