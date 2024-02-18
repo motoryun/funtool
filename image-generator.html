@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>占位图生成，自定义大小、内容、背景 - 在线工具</title>
+		<meta name="keywords" content="图片生成,占位图,生成图片,image,placeholder">
+		<meta name="description" content="在线快速生成占位图，可自定义高宽大小、颜色、显示文本、背景色，预加载显示图生成">
+		<link href="./style/image-generator.31245abe.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l">
+					<h1>占位图片生成器</h1>
+					<div class="config">
+						<div class="row type">
+							<div class="row-title">类型</div><input type="radio" name="type">按宽高尺寸 <input type="radio"
+								name="type">按宽高比例
+						</div>
+						<div class="row size">
+							<div class="row-title">尺寸</div><span>宽</span> <input>
+							<div>x</div><span>高</span> <input>
+						</div>
+						<div class="row ratio" style="display: none;">
+							<div class="row-title">比例</div>
+							<div class="row"><button>以宽为准</button> <input placeholder="请输入宽高比例，如：16:9"> <span>边长</span>
+								<input></div>
+						</div>
+						<div class="row text">
+							<div class="row-title">内容</div><textarea
+								placeholder="输入自定义文本。若无文本，则默认以“宽 x 高”作为文本内容"></textarea>
+						</div>
+						<div class="row color">
+							<div class="row-title">颜色</div>
+							<div class="row color-picker" style="display: flex;">文本<div class="preview"
+									style="background-color: #fff;"></div>
+								<div class="picker"><input type="color"></div>
+							</div>
+							<div class="row color-picker" style="display: flex;">背景<div class="preview"
+									style="background-color: #000;"></div>
+								<div class="picker"><input type="color"></div>
+							</div>
+						</div>
+						<div class="row format">
+							<div class="row-title">格式</div><input type="radio" name="format">png <input type="radio"
+								name="format">jpg <input type="radio" name="format">gif
+						</div>
+					</div>
+					<div class="result vblock-m">
+						<div>结果</div>
+						<div class="url"><button class="btn">复制</button> <input size="small" readonly="readonly"></div>
+						<div class="img" style="overflow-x: auto;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/image-generator.8ffbe15a3fb7ff28aeac.js"></script>
+	</body>
+</html>

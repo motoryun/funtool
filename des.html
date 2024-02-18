@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>DES 加密、解密 - 在线工具</title>
+		<meta name="keywords" content="desc,加密,解密,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="DES 在线加密、解密工具，开发人员必备在线工具箱">
+		<link href="./style/des.34690da9.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l" style="max-width: 1000px">
+					<h1>DES 加密、解密</h1>
+					<div class="statement">
+						<h2 class="lsb">DES 介绍</h2>
+						<p>DES全称为Data Encryption Standard，即数据加密标准，是一种使用密钥加密的块算法。</p>
+						<p>1977年被美国联邦政府的国家标准局确定为联邦资料处理标准（FIPS），并授权在非密级政府通信中使用，随后该算法在国际上广泛流传开来。</p>
+						<p>需要注意的是，在某些文献中，作为算法的DES称为数据加密算法（Data Encryption Algorithm,DEA），已与作为标准的DES区分开来。</p>
+						<p>DES算法的入口参数有三个：Key、Data、Mode。</p>
+						<p>其中，Key为7个字节共56位，是DES算法的工作密钥（对称的）；Data为8个字节64位，是要被加密或被解密的数据（DES算法加密解密的数据块大小，如果待加密数据不是64位的倍数，会有某种填充规则）；Mode为DES的工作方式，有两种：加密或解密。
+						</p>
+						<p>DES设计中使用了分组密码设计的两个原则：混淆（confusion）和扩散(diffusion)，其目的是抗击敌手对密码系统的统计分析。</p>
+						<p>混淆，是使密文的统计特性与密钥的取值之间的关系尽可能复杂化，以使密钥和明文以及密文之间的依赖性对密码分析者来说是无法利用的。</p>
+						<p>扩散的作用，就是将每一位明文的影响尽可能迅速地作用到较多的输出密文位中，以便在大量的密文中消除明文的统计结构，并且使每一位密钥的影响尽可能迅速地扩展到较多的密文位中，以防对密钥进行逐段破译。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/des.f34c7aba06ace5cdc6b5.js"></script>
+	</body>
+</html>

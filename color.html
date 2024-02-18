@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>颜色值格式转换，RGB/十六进制HEX/HSL格式转换 - 在线工具</title>
+		<meta name="keywords" content="颜色转换,转换工具,颜色值,RGB,HSL,HEX,格式转换,十六进制颜色,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="颜色值格式转换，支持十六进制、RGB、HSL等各种颜色格式相互转换格式，在线预览颜色">
+		<link href="./style/color.3242317a.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l" style="padding-bottom: 20px;">
+					<h1>颜色格式转换</h1>
+					<div class="row"><span>颜色值</span> <input placeholder="#2b303b 或 rgb(43,48,59) 或 hsl(221,16%,20%)">
+						<button>转换</button></div>
+					<div>
+						<div class="table result-table" style="width: 100%;">
+							<div class="row table_th">
+								<div class="table_td">预览</div>
+								<div class="table_td">格式</div>
+								<div class="table_td">值</div>
+							</div>
+							<div class="row">
+								<div class="table_td"><span class="preview"></span></div>
+								<div class="table_td"><span></span></div>
+								<div class="table_td"></div>
+							</div>
+						</div>
+						<div class="tips">*点击行可进行复制</div>
+					</div>
+					<div class="row default-colors">
+						<div class="collapse" style="width: 100%;">
+							<div class="collapse-item">
+								<div class="collapse-item_head"><span></span></div>
+								<div class="table">
+									<div class="row table_th">
+										<div class="table_td">预览</div>
+										<div class="table_td">name</div>
+										<div class="table_td">HEX（十六进制）</div>
+										<div class="table_td">RGB</div>
+										<div class="table_td">HSL</div>
+									</div>
+									<div class="row">
+										<div class="table_td" style="width: 120px"><span class="preview"
+												style="height: 24px"></span></div>
+										<div class="table_td"></div>
+										<div class="table_td"></div>
+										<div class="table_td"></div>
+										<div class="table_td"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="introduce vblock-s">
+						<h3 class="lsb">RGB色彩空间</h3>
+						<p>又称RGB颜色模型或红绿蓝颜色空间，是一种加色模型，将红（red）、绿（green）、蓝（blue）三原色的色光以不同的比例相加， 以产生多种多样的色光。
+							在css中表示方法譬如：rgb(255, 0, 0)表示红色，rgb(255, 255, 255) 表示黑色。</p>
+						<h3 class="lsb">HEX色彩空间</h3>
+						<p>又叫十六进制颜色模式，是用十六进制表示颜色的。形如 #000000 的 格式，这是在css中经常使用的。</p>
+						<h3 class="lsb">RGBA色彩空间</h3>
+						<p>是代表 Red、Green、Blue、和Alpha的色彩空间 。就是在RGB的基础上增加了透明度。 这是css3新增加的色彩模式，它的表示方法是，rgba(255, 255, 255,
+							0.5)， 其中alpha的取值在0~1之间，0为完全透明，1为完全不透明。与opacity属性的区别是，opacity能影响到其子元素透明度，RGBA不会。</p>
+						<h3 class="lsb">HSL色彩空间</h3>
+						<p>HSL 和 HSV （也叫 HSB ）是对RGB色彩空间中点的两种有关系的表示，它们尝试描述比 RGB 更准确的感知颜色联系，并仍保持在计算上简单。 H指 Hue（色相 ）、S指
+							Saturation（饱和度 ）、L指 Lightness（亮度 ）、V指 Value（色调） 、B指 Brightness（明度 ）。 色相
+							（H）是色彩的基本属性，就是平常所说的颜色名称，如红色 、黄色等，取值范围 0-360。 饱和度 （S）是指色彩的纯度，越高色彩越纯，低则逐渐变灰，取值范围 0-100% 。 明度
+							（V），亮度（L），取值范围 0-100% 。W3C 的 CSS3 采用的是HSL</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/color.9fb3c616fc4ae05144ba.js"></script>
+	</body>
+</html>

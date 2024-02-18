@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>User Agent - 在线工具</title>
+		<meta name="keywords" content="虚拟身份证生成器,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="虚拟身份证生成器">
+		<link href="./style/user-agent.79c53e0a.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page" class="json2xml">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-s" style="max-width: 850px">
+					<h1 class="row-title">User Agent</h1><textarea></textarea>
+					<div class="row info">
+						<div class="section">
+							<h3 class="row-title">操作系统</h3>
+							<div class="form os">
+								<div class="form-item"><span class="form-title">名称</span> <span
+										class="form-value">{{ os.name }}</span></div>
+								<div class="form-item"><span class="form-title">版本</span> <span
+										class="form-value">{{ os.version }}</span></div>
+							</div>
+							<h3 class="row-title">浏览器信息</h3>
+							<div class="form browser">
+								<div class="form-item"><span class="form-title">名称</span> <span
+										class="form-value">{{ browser.name }}</span></div>
+								<div class="form-item"><span class="form-title">版本</span> <span
+										class="form-value">{{ browser.version }}</span></div>
+								<div class="form-item"><span class="form-title">内核</span> <span
+										class="form-value">{{ browser.engine }}</span></div>
+							</div>
+						</div>
+						<div class="section">
+							<h3 class="row-title">显示器信息</h3>
+							<div class="form client">
+								<div class="form-item"><span class="form-title">像素密度比</span> <span
+										class="form-value">{{ client.devicePixelRatio }}</span></div>
+								<div class="form-item"><span class="form-title">颜色深度</span> <span
+										class="form-value">{{ client.colorDepth }}</span></div>
+								<div class="form-item"><span class="form-title">像素深度</span> <span
+										class="form-value">{{ client.pixelDepth }}</span></div>
+								<div class="form-item"><span class="form-title">浏览器宽度</span> <span
+										class="form-value">{{ client.width }}</span></div>
+								<div class="form-item"><span class="form-title">浏览器高度</span> <span
+										class="form-value">{{ client.height }}</span></div>
+								<div class="form-item"><span class="form-title">可用宽度</span> <span
+										class="form-value">{{ client.availWidth }}</span></div>
+								<div class="form-item"><span class="form-title">可用高度</span> <span
+										class="form-value">{{ client.availHeight }}</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script src="./lib/user-agent.57d474f2863e7ca90cc3.js"></script>
+	</body>
+</html>

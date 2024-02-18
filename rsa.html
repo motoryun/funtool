@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>RSA 加密、解密，生成公钥密钥对 - 在线工具</title>
+		<meta name="keywords"
+			content="RAS,rsa在线加密,rsa加密工具,rsa在线解密,RSA加密,RSA解密,RSA算法,RSA私钥,RSA公钥,SHA256WithRSA,在线工具,要你命3000">
+		<meta name="description"
+			content="RAS 在线加密、解密工具，公钥私钥生成，RSA公钥私钥加密解密,RSA2公钥私钥加密解密，RSA、RSA2加密验证，在线RSA加密、解密工具,RSA解密,RSA算法,RSA私钥,RSA公钥">
+		<link href="./style/rsa.e1ecee8e.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l" style="max-width: 1000px">
+					<h1>RSA 加密</h1>
+					<div class="key-area">
+						<div class="key">
+							<p>Private Key (私钥)</p><textarea></textarea>
+						</div>
+						<div class="operate"><select class="selector">
+								<option label="256bit"></option>
+								<option label="512bit"></option>
+								<option label="1024bit"></option>
+								<option label="2048bit"></option>
+								<option label="3072bit"></option>
+								<option label="4096bit"></option>
+							</select> <button class="btn">生成密钥</button></div>
+						<div class="key">
+							<p>Public Key (公钥)</p><textarea></textarea>
+						</div>
+					</div>
+					<div class="input-area">
+						<div class="textarea vblock-xs">
+							<p>输入</p><textarea></textarea>
+						</div>
+						<div class="operate"><button class="btn">加密</button> <button class="btn"
+								style="margin: 10px 0 0">解密</button></div>
+						<div class="textarea vblock-xs">
+							<p>输出</p><textarea></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/rsa.4fb3340d00848d8d7413.js"></script>
+	</body>
+</html>

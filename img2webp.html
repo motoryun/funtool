@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>图片转 webp 格式 - 在线工具</title>
+		<meta name="keywords" content="jpeg,jpg,png,gift,webp,转换,图片格式转换,图片转webp格式,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="图片转 webp 格式，支持 jpg, png, gift 等常见图片格式，减小图片大小，提高网络加载速度">
+		<link href="./style/img2webp.c6c50e1f.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page">
+			<header></header>
+			<div class="main_body wrapper a-p vblock-l">
+				<h1>图片转 webp</h1>
+				<div class="row file" style="flex-direction: column;align-items: flex-start"><input type="file"
+						multiple="multiple">
+					<p class="warning">
+						*只能上传<span>jpg</span>/<span>png</span>/<span>jpeg</span>/<span>gif</span>文件，且不超过<span>10
+							MB</span></p>
+				</div>
+				<div class="row" style="justify-content: flex-end;margin: 0;">
+					<p style="color: #5e616d;margin-right: 32px;">进度：{{ totalCount }} / {{ files.length }}<span
+							style="display: none;">，失败 {{ failCount }} 个</span></p>
+					<div><button>清空</button> <button>下载全部</button></div>
+				</div>
+				<div class="row files" style="display: none;">
+					<div class="table">
+						<div class="row table_th">
+							<div class="table_td" style="flex-grow: 1">文件名</div>
+							<div class="table_td size">转换前</div>
+							<div class="table_td size">转换后</div>
+							<div class="table_td size">压缩率</div>
+							<div class="table_td" style="width: 200px;">状态</div>
+							<div class="table_td" style="width: 150px;flex-shrink: 0">操作</div>
+						</div>
+						<div class="row">
+							<div class="table_td" style="flex-grow: 1">name</div>
+							<div class="table_td size">size</div>
+							<div class="table_td size">size</div>
+							<div class="table_td size">value</div>
+							<div class="table_td" style="width: 200px;">value</div>
+							<div class="table_td" style="flex-shrink: 0;width: 150px;"><button
+									style="display: none;">删除</button> <button style="display: none;">下载</button>
+								<div style="display: none;" class="progress-wrapper">
+									<div class="progress"></div>
+								</div>
+							</div>
+						</div>
+						<div class="empty" style="display: none;">暂无数据</div>
+					</div>
+				</div>
+				<div class="row files placeholder"></div>
+				<div class="statement">
+					<h2 style="margin-bottom: 20px;">Webp 介绍</h2>
+					<p>webp是由谷歌推出的一种全新图片文件格式，与JPEG格式一样，Webp是一种有损压缩格式。不同的是，Webp格式的压缩效率更为出色，在同等质量下，Webp格式图像的体积要比JPEG格式图像小40%。
+						目前互联网的流量中有65%为图片，这意味如果Google让Webp格式得到普及的话，浏览网页的速度将大幅提升。</p>
+					<p class="statement-title">webp是什么文件?</p>
+					<p>webp文件格式和JPEG类似，也是通过牺牲图片质量来降低图片文件大小，但能在相同质量的情况下比JPEG文件尺寸小巧许多。
+						目前的Chrome应用商店图片已全部转换为Webp格式。虽说webp格式有各种优点，但支持甚少是最大的问题，比如下载下来的Webp图片无法通过常规软件编辑、浏览，那就只有转换成常规格式了。
+					</p>
+					<p class="statement-title">webp文件如何打开?</p>
+					<p>Webp文件可以通过Google Chrome浏览器来打开。 当然了，第三方的世界之窗等浏览器也是可以打开的。</p>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.21.0/axios.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/img2webp.56bde6c64bb0b3b90059.js"></script>
+	</body>
+</html>

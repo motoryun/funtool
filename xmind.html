@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>XMind 脑图 - 在线工具</title>
+		<meta name="keywords" content="xmind, naotu, 脑图, nt, swdt, siweidaotu, 思维导图,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="xmind, naotu, 脑图, nt, swdt, siweidaotu, 思维导图">
+		<link href="./style/xmind.ac721bb8.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1 style="display: none;">在线画脑图 xmind 工具</h1>
+		<div id="page">
+			<header></header>
+			<div class="trigger"><i class="trigger-icon"></i>
+				<div class="trigger-tooltip">{{ trigger ? '收起' : '帮助' }}</div>
+			</div>
+			<div class="help">
+				<div class="rules">
+					<div class="rule"><span class="key">Tab</span><span class="desc">插入子节点</span></div>
+					<div class="rule"><span class="key">Enter</span><span class="desc">插入后置节点</span></div>
+					<div class="rule"><span class="key">Shift</span>+<span class="key">Enter</span><span
+							class="desc">插入前置节点</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">Enter</span><span
+							class="desc">插入父节点</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">↑|←|↓|→</span><span
+							class="desc">多节点选择</span></div>
+					<div class="rule"><span class="key">Shift</span>+<span class="key">↑|←|↓|→</span><span
+							class="desc">移动节点</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">e</span><span
+							class="desc">展开/收起节点</span></div>
+					<div class="rule"><span class="key">Space</span>+<span class="key">左键</span><span
+							class="desc">拖动画布</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">o</span><span
+							class="desc">导入文件</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">s</span><span
+							class="desc">导出为文件</span></div>
+					<div class="rule"><span class="key">Ctrl</span>+<span class="key">Shift</span>+<span
+							class="key">s</span><span class="desc">导出为图片</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="container-without-vue">
+			<div id="app" style="width: 100%;height: calc(100vh - 54px);min-height: 500px;"></div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/xmind.66f8c4343453040e5d59.js"></script>
+	</body>
+</html>

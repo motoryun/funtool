@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+		<title>JavaScript 格式化、压缩 - 在线工具</title>
+		<meta name="keywords" content="javascript,js,压缩,美化,格式化,开发者,开发人员,工具箱,在线工具,开发必备,要你命3000">
+		<meta name="description" content="JavaScript 代码格式化显示，压缩代码，减小占用空间，语法检查">
+		<link href="./style/js-beautify.498f5311.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page" class="json2xml">
+			<div class="page_wrapper">
+				<header></header>
+				<div class="main_body wrapper a-p vblock-l" style="max-width: 1000px">
+					<h1>JavaScript格式化</h1>
+					<div class="operate"><select class="tab-size-selector">
+							<option class="option" label="缩进 2"></option>
+							<option class="option" label="缩进 4"></option>
+							<option class="option" label="缩进 8"></option>
+						</select> <button class="operate-btn">格式化</button> <button class="operate-btn">压缩</button>
+						<button class="operate-btn">复制结果 <i class="el-icon-document-copy"></i></button> <button
+							class="operate-btn">清空输入 <i class="el-icon-circle-close"></i></button> <input
+							type="checkbox" class="operate-btn"> 清除多余空行</div>
+					<div class="row">
+						<div class="editor-wrap" @paste="handleBeautify"><textarea
+								style="height: 500px;border: 1px solid #409eff;"></textarea></div>
+					</div>
+					<div class="error-wrap" style="display: none;">
+						<h3 class="error-title">Error：</h3>
+						<p class="error-msg">{{ errorMsg }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/vue/3.2.6/vue.runtime.global.prod.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?fc63be63234386c7af91e90f66ab7ae0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script src="./lib/js-beautify.7d57124803fea605eb26.js"></script>
+	</body>
+</html>
